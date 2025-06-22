@@ -118,6 +118,7 @@ jobs:
         
 
   build_docker_image_and_push:
+  
     runs-on: self-hosted
     needs: build_project_and__scan
     steps:
@@ -153,6 +154,7 @@ jobs:
         
 
   deploy_to_kubernetes:
+  
     runs-on: self-hosted
     needs: build_docker_image_and_push
     steps:
